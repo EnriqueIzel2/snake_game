@@ -28,7 +28,7 @@ function criarCobra() {
 
 function drawFood() {
   context.fillStyle = "red";
-  context.fillRect(food.x, food.x, box, box);
+  context.fillRect(food.x, food.y, box, box);
 }
 
 document.addEventListener("keydown", update);
@@ -72,7 +72,7 @@ function iniciarJogo() {
     food.y = Math.floor(Math.random() * 15 + 1) * box;
   }
 
-  let newHead = {
+  const newHead = {
     x: snakeX,
     y: snakeY,
   };
